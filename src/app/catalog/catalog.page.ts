@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CartService} from '../cart.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-catalog',
+  templateUrl: './catalog.page.html',
+  styleUrls: ['./catalog.page.scss'],
 })
-export class HomePage {
-
+export class CatalogPage implements OnInit {
     cart = [];
     items = [];
     sliderConfig = {
@@ -17,7 +16,7 @@ export class HomePage {
         slidesPerView: 1.6
     }
 
-    constructor(private cartService: CartService, private router: Router) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
     ngOnInit() {
         this.cart = this.cartService.getCart();

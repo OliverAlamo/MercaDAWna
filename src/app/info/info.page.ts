@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CartService} from '../cart.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-info',
+  templateUrl: './info.page.html',
+  styleUrls: ['./info.page.scss'],
 })
-export class HomePage {
+export class InfoPage implements OnInit {
 
     cart = [];
     items = [];

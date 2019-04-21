@@ -16,10 +16,26 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Catalogo',
+      url: '/catalog',
       icon: 'list'
-    }
+    },
+      {
+          title: 'Lista de Compra',
+          url: '/cart',
+          icon: 'cart'
+      },
+      {
+          title: 'Quienes Somos',
+          url: '/info',
+          icon: 'finger-print'
+      },
+      {
+          title: 'Contacto',
+          url: '/register',
+          icon: 'paper-plane'
+      },
+
   ];
 
   constructor(

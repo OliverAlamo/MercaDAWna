@@ -1,44 +1,72 @@
-<ion-header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<ion-header >
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Inicio
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()">
+        <ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+        <ion-icon name="list" slot="icon-only"></ion-icon>
+
+      </ion-button>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
+      <img src="/assets/mercalogo.png" />
+
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+
+        <ion-card-title>Bienvenido a Mercadawna</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        <p>Comprueba nuestro catálogo de productos, con las mejores ofertas!!. Crea una lista productos a comprar y empieza la carrera</p>
       </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+    <ion-card class="welcome-card">
+      <ion-card-header>
+
+        <ion-card-title>Mejores Ofertas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>En Mercadawna tenemos las mejores ofertas hechas a la medida del cliente</p>
+        <ion-img src="https://www.abc.es/media/espana/2018/09/14/alpro-mercadona-kXbB--620x349@abc.jpg"></ion-img>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Calidad a tu alcance</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Nos preocupamos por la calidad de nuestros productos, nos procupamos por la satisfacciñon de nuestro cliente...</p>
+        <ion-img src="https://foodscene.deliveroo.es/assets/images/blogs/foodscene.deliveroo.es/es/platos/1JZc4qtB7a7kmQRdafqTrlzASGz4JcQiZBUCyW9rCnfM/h_es_-_comida_libanesa.jpg?v=1.01"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Recursos</ion-label>
+    </ion-list-header>
+    <ion-item href="/register">
+      <ion-icon slot="start" color="medium" name="paper-plane"></ion-icon>
+      <ion-label>Contactanos</ion-label>
+    </ion-item>
+    <ion-item href="/info">
+      <ion-icon slot="start" color="medium" name="finger-print"></ion-icon>
+      <ion-label>Quienes Somos</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
