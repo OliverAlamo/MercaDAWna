@@ -22,7 +22,7 @@ export class CartService {
             expanded: true,
             pasillo: 2,
             products: [
-                { id: 5, name: 'Macaroones', price: '1', pasillo: 2, picture: 'https://supercostablanca.es/3636/alteza-macarrones-500g--pasta.jpg'},
+                { id: 5, name: 'Macarrones', price: '1', pasillo: 2, picture: 'https://supercostablanca.es/3636/alteza-macarrones-500g--pasta.jpg'},
                 { id: 6, name: 'Tortelini', price: '2', pasillo: 2, picture: 'https://az836796.vo.msecnd.net/media/image/product/en/large/0077956611088.jpg'},
                 { id: 7, name: 'Spaghettis', price: '1.5', pasillo: 2, pictute: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrscQKPtU3vYN7N7SM3fB3fpaihhotbkhnL_LuAlAt65OKpved'},
             ]

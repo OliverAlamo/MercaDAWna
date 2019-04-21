@@ -15,7 +15,7 @@
                 <span slot="end"><ion-icon name="trash"></ion-icon></span>
             </ion-item>
             <ion-item *ngFor="let item of selectedItems; let i = index;" lines="inset">
-                {{ item.count }}x {{ item.name }} | Pasillo {{item.pasillo}} | Total {{ (item.price * item.count)  }} €
+                {{ item.count }}x {{ item.name }}  |  Pasillo {{item.pasillo}}  |  Total {{ (item.price * item.count)  }} €
                 <!--<ion-checkbox color="success"  slot="end"text-left></ion-checkbox>-->
                 <ion-button color="success" expand="full" slot="end" text-left (click)="remove(i)">
                     <ion-icon name="trash"></ion-icon>
