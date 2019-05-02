@@ -3,7 +3,11 @@ import {CartService} from '../cart.service';
 import {Router} from '@angular/router';
 import {AlertController} from '@ionic/angular';
 
+import { Pipe } from '@angular/core';
 
+@Pipe({
+    name: 'sort'
+})
 
 @Component({
   selector: 'app-cart',
@@ -17,6 +21,7 @@ export class CartPage implements OnInit {
   constructor(private cartService: CartService, private alert: AlertController) {
 
     }
+
 
   ngOnInit() {
       let items = this.cartService.getCart();
@@ -47,6 +52,8 @@ export class CartPage implements OnInit {
     remove(no) {
         (this.selectedItems).splice(no, 1);
         this.cartService.removeProduct(no);
+    }
+    refresh() {
     }
 
 
